@@ -1,0 +1,32 @@
+.hamburger {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #495464;
+  margin-block: 10px;
+  transition: transform 0.35s, opacity 0.25s;
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
